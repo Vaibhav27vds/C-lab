@@ -64,13 +64,13 @@ void sortList(Node** head) {
 // Function to reverse the list
 void reverseList(Node** head) {
     Node* prev = NULL;
-    Node* current = *head;
+    Node* temp = *head;
     Node* next = NULL;
-    while (current != NULL) {
-        next = current->next;
-        current->next = prev;
-        prev = current;
-        current = next;
+    while (temp != NULL) {
+        next = temp->next;
+        temp->next = prev;
+        prev = temp;
+        temp = next;
     }
     *head = prev;
 }

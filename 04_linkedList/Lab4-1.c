@@ -21,7 +21,7 @@ struct Node {
 void insertAtBeginning(struct Node** head, int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
-    newNode->next = *head;
+     newNode->next = *head;
     *head = newNode;
 }
 void insertAtEnd(struct Node** head, int data) {
